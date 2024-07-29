@@ -8,7 +8,7 @@ const Home = () => {
   const { state } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("/allpost", {
+    fetch("https://instaclone-backend-rgh2.onrender.com/allpost", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   const likePost = (postId) => {
-    fetch("/like", {
+    fetch("https://instaclone-backend-rgh2.onrender.com/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Home = () => {
   };
 
   const unlikePost = (postId) => {
-    fetch("/unlike", {
+    fetch("https://instaclone-backend-rgh2.onrender.com/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +81,7 @@ const Home = () => {
   };
 
   const makeComment = (postId) => {
-    fetch("/comment", {
+    fetch("https://instaclone-backend-rgh2.onrender.com/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -116,7 +116,7 @@ const Home = () => {
   };
 
   const deletePost = (postId) => {
-    fetch(`/deletepost/${postId}`, {
+    fetch(`https://instaclone-backend-rgh2.onrender.com/deletepost/${postId}`, {
       method: "delete",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
@@ -132,7 +132,7 @@ const Home = () => {
   };
 
   const deleteComment = (postId, commentId) => {
-    fetch(`/deletecomment/${postId}/${commentId}`, {
+    fetch(`https://instaclone-backend-rgh2.onrender.com/deletecomment/${postId}/${commentId}`, {
       method: "delete",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),

@@ -74,7 +74,7 @@ const Navbar = () => {
 
   const fetchUsers = (query) => {
     setSearch(query);
-    fetch('/search-users', {
+    fetch('https://instaclone-backend-rgh2.onrender.com/search-users', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

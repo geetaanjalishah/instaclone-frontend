@@ -7,7 +7,7 @@ const Profile = () => {
   const [image, setImage] = useState("");
 
   useEffect(() => {
-    fetch("/mypost", {
+    fetch("https://instaclone-backend-rgh2.onrender.com/mypost", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
