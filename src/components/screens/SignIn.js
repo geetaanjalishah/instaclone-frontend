@@ -19,7 +19,7 @@ const SignIn = () => {
       return;
     }
     
-    fetch("/signin", {
+    fetch("https://instaclone-backend-rgh2.onrender.com/signin", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
